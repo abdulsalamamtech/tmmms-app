@@ -1,7 +1,7 @@
 # TMMMS APP
 Truck Monitoring Maintenance Management System
 
-## Users and Actores
+## Users and Actors
 - admin
     - super admin
     - manager
