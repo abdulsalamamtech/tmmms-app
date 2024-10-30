@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    padding: 1px 10px;
+    background-color: rgb(69, 102, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 100px; */
+}
+
+.logo h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 20);
+    letter-spacing: 2px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo {
+    margin: 10px 100px;
+}
+
+.social-btn {
+    margin: 0px 100px;
+}
+
+.social-btn button {
+    height: 40px;
+    width: 40px;
+    margin: 0px 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.social-btn button:hover {
+    transform: scale(1.1);
+    color: yellowgreen;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.home-content {
+    background-image: url("/images/hyianda.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+}
+
+.home-bg {
+    background-color: rgba(0, 0, 0, 0.911);
+    height: 84vh;
+    padding: 20px;
+}
+
+.home-content .content {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 70%;
+}
+
+.content h1 {
+    font-size: 3.7rem;
+}
+
+.content p {
+    color: yellowgreen;
+    font-size: 24px;
+    font-family: cursive;
+    margin-top: -10px;
+}
+
+@media screen and (max-width: 720px) {
+    .content {
+        margin-top: 80px;
+    }
+    .content h1 {
+        font-size: 2.4rem;
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+    }
+    .content p {
+        font-size: 18px;
+    }
+    .home-bg .content .search-area input {
+        height: 37px;
+        width: 90%;
+    }
+    .social-btn {
+        margin-bottom: 20px;
+    }
+    .social-btn button {
+        margin-right: 20px;
+    }
+    .logo h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+}
+
+.content .search-area {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    /* align-items: center; */
+}
+
+.content .search-area input {
+    height: 45px;
+    width: 600px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.content .search-area button {
+    width: 120px;
+    background-color: yellowgreen;
+    border: none;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-left: 5px;
+}
+
+.content .search-area button:hover {
+    transform: translateX(6px);
+}
+
+.container {
+    width: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrapper2 {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrapper3 {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    55% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    65% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    80% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.wrapper img {
+    width: 100%;
+    animation: slide 18s infinite;
+}
+
+.wrapper2 img {
+    width: 100%;
+    animation: slide 25s infinite;
+}
+
+.wrapper3 img {
+    width: 100%;
+    animation: slide 14s infinite;
+}
+
+.slide-area {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+.label {
+    text-align: center;
+    color: black;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.label h1::after {
+    content: "";
+    height: 4px;
+    display: block;
+    margin: auto;
+    width: 0;
+    border-radius: 50px;
+    transition: all .6s linear;
+}
+
+.label h1:hover::after {
+    width: 100%;
+    background-color: rgb(68, 100, 5);
+}
+
+.cars-group {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-hold {
+    height: 370px;
+    width: fit-content;
+    padding: 15px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.25);
+    /* padding-bottom: 200px; */
+    border-radius: 10px;
+    transition: all.5s;
+}
+
+@media screen and (max-width: 720px) {
+    .car-hold img {
+        height: 150px;
+    }
+    .car-hold .model {
+        width: 120px;
+    }
+    .logo {
+        width: fit-content;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+}
+
+.car-hold:hover {
+    transform: translateY(-5px);
+}
+
+.car-hold img {
+    display: block;
+    margin: auto;
+}
+
+.car-hold .describe {
+    margin: 20px 0px;
+    padding-bottom: 40px;
+}
+
+.car-hold .describe .model {
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.car-hold .describe .price {
+    color: green;
+    font-weight: bold;
+}
+
+.car-hold p {
+    margin: 7px 0px;
+    font-weight: bold;
+}
+
+.car-hold .describe button {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    width: 80%;
+    background-color: blue;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+    transition: 0.4s;
+    margin-bottom: 50px;
+}
+
+.car-hold .describe button:hover {
+    transform: scale(1.1);
+}
+
+footer .sponsor {
+    background-color: rgb(46, 40, 40);
+    color: white;
+    padding: 4px 20px;
+    margin-top: 20px;
+}

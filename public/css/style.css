@@ -1,0 +1,98 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        background-color: #e60064;
+        height: 80px;
+        width: 100%;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0;
+    }
+    
+    nav ul {
+        float: right;
+        margin-right: 55px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: cursive;
+        padding: 7px 17px;
+    }
+    
+    label.logo {
+        color: white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0px 100px;
+        font-weight: bold;
+        font-family: cursive;
+    }
+    
+    .CheckButton {
+        height: 30px;
+        float: right;
+        margin: 20px 0px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    .myCheckbox {
+        display: none;
+    }
+    
+    a:hover,
+    a.active {
+        color: #f7c324;
+    }
+    
+    @media screen and (max-width: 952px) {
+        label.logo {
+            font-size: 30px;
+            padding-left: 50px;
+        }
+        nav ul li a {
+            font-size: 16px;
+        }
+    }
+    
+    @media screen and (max-width: 858px) {
+        .CheckButton {
+            display: block;
+        }
+        ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: pink;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        nav ul li {
+            display: block;
+            margin: 50px 0px;
+            line-height: 30px;
+        }
+        nav ul li a {
+            font-size: 20px;
+            color: black;
+        }
+        a:hover,
+        a.active {
+            color: #e60064;
+        }
+        .myCheckbox:checked~ul {
+            left: 0;
+        }
+    }
