@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Finder | App</title>
     <!-- Tailwind cdn -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="/css/cdn.tailwindcss.com.3.4.5.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="/css/cdn.tailwindcss.com.3.4.5.js"></script> -->
 
     <!-- Flowbite cdn -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
@@ -40,4 +40,4 @@
 
 </head>
 
-<body>
+<body class="w-full dark:bg-gray-600">
