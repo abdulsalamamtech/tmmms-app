@@ -20,13 +20,10 @@
 
                     <!-- Logo -->
                     <a href="{{ route('dashboard') }}"
-                        class="flex items-center shadow p-2 text-xl text-gray-100 rounded-lg
+                        class="flex items-center shadow p-2 px-2 text-xl text-gray-100 rounded-lg
                         dark:text-white dark:hover:bg-gray-700 group sm:text-center
                         hover:bg-[#7eb908] bg-[#0828b9] text-blue-100 font-bold leading">
-                        <div
-                            class="flex-shrink-0 w-8 h-5 text-gray-100 dark:text-gray-400 group-hover:text-gray-200 dark:group-hover:text-white">
-                            <i class="fa fa-truck"></i>
-                        </div>
+                        <img src="{{ asset('images/tmmms-logo-white.png') }}" alt="Truck" class="w-8 rounded-full m-1">
                         <span class="flex-1 ms-3 whitespace-nowrap dark:text-white pe-1">TMMMS</span>
                     </a>
                 </div>
