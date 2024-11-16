@@ -7,7 +7,8 @@
         <div class="rounded-lg dark:border-gray-700 mt-20">
 
             {{-- Information --}}
-            <div class="bg-white shadow-lg rounded-lg flex items-center gap-2 p-4 w-full dark:bg-slate-800 dark:text-gray-100">
+            <div
+                class="bg-white shadow-lg rounded-lg flex items-center gap-2 p-4 w-full dark:bg-slate-800 dark:text-gray-100">
                 <div class="md:p-2">
                     <i class="fa fa-truck bg-[#0828b9] p-2 rounded-full md:text-2xl text-white"></i>
                 </div>
@@ -23,7 +24,7 @@
 
                 <div class="grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
                     <div
-                        class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+                        class="dark:bg-gray-700 dark:text-gray-300 dark:border-gray-700 relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
                         <div
                             class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -39,20 +40,20 @@
                         </div>
                         <div class="p-4 text-right">
                             <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
-                                Today's
-                                Money</p>
+                                Total Balance
+                            </p>
                             <h4
                                 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                                $53k</h4>
+                                $503k</h4>
                         </div>
-                        <div class="border-t border-blue-gray-50 p-4">
+                        <div class="dark:border-gray-500 border-t border-blue-gray-50 p-4">
                             <p class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
                                 <strong class="text-green-500">+55%</strong>&nbsp;than last week
                             </p>
                         </div>
                     </div>
                     <div
-                        class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+                        class="dark:bg-gray-700 dark:text-gray-300 dark:border-gray-700 relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
                         <div
                             class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -64,8 +65,8 @@
                         </div>
                         <div class="p-4 text-right">
                             <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
-                                Today's
-                                Users</p>
+                                Users
+                            </p>
                             <h4
                                 class="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
                                 2,300</h4>
@@ -76,8 +77,9 @@
                             </p>
                         </div>
                     </div>
+
                     <div
-                        class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+                        class="dark:bg-gray-700 dark:text-gray-300 dark:border-gray-700 relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
                         <div
                             class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -101,8 +103,9 @@
                             </p>
                         </div>
                     </div>
+
                     <div
-                        class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
+                        class="dark:bg-gray-700 dark:text-gray-300 dark:border-gray-700 relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 border border-blue-gray-100 shadow-sm">
                         <div
                             class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 absolute grid h-12 w-12 place-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -129,22 +132,382 @@
 
             </div>
 
+            {{-- Tables --}}
+            <div class="my-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                <div class="relative p-8 overflow-x-auto shadow-md sm:rounded-lg">
+                    <!-- Header Section -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300">Programs</h2>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                            Add Program
+                        </button>
+                    </div>
+
+
+                    <div
+                        class="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white dark:bg-gray-900 px-4">
+                        <div>
+                            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction"
+                                class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                                type="button">
+                                <span class="sr-only">Action button</span>
+                                Action
+                                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownAction"
+                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="dropdownActionButton">
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reward</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Promote</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Activate
+                                            account</a>
+                                    </li>
+                                </ul>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete
+                                        User</a>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="table-search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <div
+                                class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="text" id="table-search-users"
+                                class="block pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Search for users">
+                        </div>
+                    </div>
+
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-all-search" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Name
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Position
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Status
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-1" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    React Developer
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- Modal toggle -->
+                                    <a href="#" type="button" data-modal-target="editUserModal"
+                                        data-modal-show="editUserModal"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-2" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Bonnie Green</div>
+                                        <div class="font-normal text-gray-500">bonnie@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    Designer
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- Modal toggle -->
+                                    <a href="#" type="button" data-modal-show="editUserModal"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-2" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-2.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Jese Leos</div>
+                                        <div class="font-normal text-gray-500">jese@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    Vue JS Developer
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- Modal toggle -->
+                                    <a href="#" type="button" data-modal-show="editUserModal"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                </td>
+                            </tr>
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-2" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-5.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Thomas Lean</div>
+                                        <div class="font-normal text-gray-500">thomes@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    UI/UX Engineer
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- Modal toggle -->
+                                    <a href="#" type="button" data-modal-show="editUserModal"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-3" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-4.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Leslie Livingston</div>
+                                        <div class="font-normal text-gray-500">leslie@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    SEO Specialist
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Offline
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <!-- Modal toggle -->
+                                    <a href="#" type="button" data-modal-show="editUserModal"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Edit user modal -->
+                    <div id="editUserModal" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 items-center justify-center hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <form class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                        Edit user
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-hide="editUserModal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-6 space-y-6">
+                                    <div class="grid grid-cols-6 gap-6">
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="first-name"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First
+                                                Name</label>
+                                            <input type="text" name="first-name" id="first-name"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Bonnie" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="last-name"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last
+                                                Name</label>
+                                            <input type="text" name="last-name" id="last-name"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Green" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="email"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                                            <input type="email" name="email" id="email"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="example@company.com" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="phone-number"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone
+                                                Number</label>
+                                            <input type="number" name="phone-number" id="phone-number"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="e.g. +(12)3456 789" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="department"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Department</label>
+                                            <input type="text" name="department" id="department"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Development" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="company"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+                                            <input type="number" name="company" id="company"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="123456" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="current-password"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Current
+                                                Password</label>
+                                            <input type="password" name="current-password" id="current-password"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="••••••••" required="">
+                                        </div>
+                                        <div class="col-span-6 sm:col-span-3">
+                                            <label for="new-password"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New
+                                                Password</label>
+                                            <input type="password" name="new-password" id="new-password"
+                                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="••••••••" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal footer -->
+                                <div
+                                    class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
+                                    <button type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save
+                                        all</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
             {{-- On going deliverings --}}
-            <div class="container my-6 min-h-screen relative">
-                <div class="flex flex-col md:flex-row gap-2 h-full">
+            <div class="h-auto my-6 md:min-h-screen mb-12">
+                <div class="flex flex-col md:flex-row gap-2 w-full">
+
                     <!-- Section A (70%) -->
-                    <div class="md:h-full lg:w-7/12 bg-white shadow-lg rounded-lg p-4 mb-8 md:mb-0 min-h-80">
+                    <div class="lg:w-7/12 bg-white shadow-lg rounded-lg p-4 mb-8 md:mb-0 dark:bg-gray-800">
                         <div class="w-full h-full">
                             <iframe class="rounded-lg w-full h-full"
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62442.94144125122!2d8.5622784!3d11.996364799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1728562227963!5m2!1sen!2sng"
                                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        {{-- <div class="bg-yellow-300 w-full h-full"></div> --}}
                     </div>
 
                     <!-- Section B (30%) -->
-                    <div class="h-full lg:w-5/12 bg-white shadow-lg rounded-lg p-4">
+                    <div class="lg:w-5/12 bg-white shadow-lg rounded-lg p-4 dark:bg-gray-800">
                         <h2 class="text-xl font-bold mb-2">Search</h2>
                         <!-- Search Input -->
                         <div class="mb-4">
@@ -152,7 +515,7 @@
                                 class="w-full p-2 border border-gray-300 rounded-lg" />
                         </div>
                         <!-- Scrollable Area -->
-                        <div class="h-[85%] overflow-y-auto border border-gray-300 rounded-lg p-2">
+                        <div class="h-screen md:min-h-100 overflow-y-auto border border-gray-300 rounded-lg p-2">
 
                             <!-- Delivery 1 -->
                             <div class="bg-blue-300 border border-gray-200 rounded-lg p-4 shadow-sm mb-2">
@@ -298,100 +661,74 @@
                                 </div>
                             </div>
 
+                            <!-- Delivery 3 -->
+                            <div class="bg-blue-300 border border-gray-200 rounded-lg p-4 shadow-sm mb-2">
+                                <div class="flex items-center mb-2">
+                                    <img src="{{ asset('images/tmmms-logo.svg') }}" alt="Truck" class="h-8 mr-2">
+                                    <span class="text-sm text-gray-500">Waybill number</span>
+                                </div>
+                                <h3 class="font-bold text-lg">EV-2017002346</h3>
+                                <p class="text-gray-600 text-sm">Product: AGO</p>
+
+                                <!-- Location Details -->
+                                <div class="mt-4">
+                                    <p><strong>From:</strong> Dangote Depot, Lekki, Lagos Nigeria</p>
+                                    <p><strong>To:</strong> Enugu, Nigeria</p>
+
+                                </div>
+
+                                <!-- Driver Info -->
+                                <h2 class="mt-4 font-bold text-xl">Driver</h2>
+                                <div class="flex items-center space-x-4 ">
+                                    <!-- Avatar Placeholder -->
+                                    <div
+                                        class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-white text-lg font-semibold">
+                                        <img src="{{ asset('images/tmmms-logo-white.png') }}" alt="Truck"
+                                            class="w-8 rounded-full m-1">
+                                    </div>
+
+                                    <!-- Driver Details -->
+                                    <div class="px-4">
+                                        <h5 class="font-semibold text-gray-800">Abdul</h5>
+                                        <p class="text-sm text-gray-500">"Transporter 1" LTD</p>
+                                    </div>
+
+                                    <!-- Contact Icons -->
+                                    <div class="ml-auto flex space-x-2">
+                                        <button
+                                            class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600">
+                                            <!-- Phone Icon -->
+                                            📞
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-400">
+                                            <!-- Chat Icon -->
+                                            💬
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- Table --}}
-            <div class="container mt-10 shadow-md relative">
-                <div class="p-6 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
-                    <!-- Header Section -->
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-2xl font-semibold text-gray-700">Tasks</h2>
-                        <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                            Add Task
-                        </button>
-                    </div>
 
-                    <!-- Tabs and Sort Option -->
-                    <div class="flex justify-between items-center mb-6">
-                        <div class="flex space-x-4">
-                            <button class="text-blue-600 font-semibold">All</button>
-                            <button class="text-gray-500">Done</button>
-                            <button class="text-gray-500">Pending</button>
-                        </div>
-                        <div>
-                            {{-- <label class="text-sm text-gray-600">Sort By:</label>
-                            <select class="ml-2 border border-gray-300 rounded px-2 py-1 text-gray-600">
-                                <option>Latest</option>
-                                <option>Oldest</option>
-                            </select> --}}
-                        </div>
-                    </div>
 
-                    <!-- Task Table -->
-                    <div class="overflow-x-auto">
-                        <table class="w-full table-auto border-collapse">
-                            <thead>
-                                <tr class="bg-gray-100">
-                                    <th class="p-4 text-left text-gray-600 font-semibold">Task</th>
-                                    <th class="p-4 text-left text-gray-600 font-semibold">Priority</th>
-                                    <th class="p-4 text-left text-gray-600 font-semibold">Due Date</th>
-                                    <th class="p-4 text-left text-gray-600 font-semibold">Comments</th>
-                                    <th class="p-4 text-left text-gray-600 font-semibold">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-gray-700">
-                                <!-- Task Row -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">Marketing Keynote Presentation</td>
-                                    <td class="p-4">
-                                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded-full text-sm">Urgent</span>
-                                    </td>
-                                    <td class="p-4">
-                                        <span class="bg-red-100 text-red-700 px-2 py-1 rounded">Due today at 18:00</span>
-                                    </td>
-                                    <td class="p-4 text-center">23</td>
-                                    <td class="p-4">
-                                        <button class="px-3 py-1 text-blue-600 bg-blue-100 rounded-lg hover:bg-blue-200">View</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Another Task Row -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">Wireframes</td>
-                                    <td class="p-4">
-                                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-sm">Normal</span>
-                                    </td>
-                                    <td class="p-4">
-                                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded">Due on 21.02.21</span>
-                                    </td>
-                                    <td class="p-4 text-center">15</td>
-                                    <td class="p-4">
-                                        <button class="px-3 py-1 text-blue-600 bg-blue-100 rounded-lg hover:bg-blue-200">View</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Additional Task Rows -->
-                                <!-- Repeat the structure above for more tasks -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
 
 
             <!-- Statistics -->
             {{-- Dashboard --}}
             <div class="p-6 mb-6 bg-white rounded-lg shadow-lg ">
+
                 {{-- Cards --}}
                 {{-- @include('dashboard.statistics.card-widget') --}}
                 {{-- Graphs --}}
                 {{-- @include('dashboard.statistics.graphs') --}}
                 {{-- Tables --}}
-                @include('dashboard.statistics.tables')
+                {{-- @include('dashboard.statistics.tables') --}}
             </div>
             <!-- End of Statistics -->
 
@@ -417,6 +754,8 @@
             </div>
             {{-- End of Charts Container --}}
 
+
+
             {{-- Start Table --}}
             <div class="p-6 my-5">
                 {{-- @include('dashboard.lost-assets.patials.table') --}}
@@ -425,5 +764,6 @@
 
 
         </div>
+
     </div>
 @endsection

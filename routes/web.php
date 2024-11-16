@@ -15,6 +15,7 @@ Route::view('profile', 'profile')
 require __DIR__.'/auth.php';
 
 
+
 Route::get('/dashboard', function (Request $request){
     // return "dashboard";
     return view('dashboard.dashboard');
@@ -22,7 +23,39 @@ Route::get('/dashboard', function (Request $request){
 
 
 
+// Programs routes
+Route::get('/programs', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.programs.index');
+})->name('programs.index');
 
+Route::get('/programs/ongoing', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.programs.ongoing');
+})->name('programs.ongoing');
+
+
+// Movement routes
+Route::get('/movements', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.movements.index');
+})->name('movements.index');
+
+Route::get('/movements/ongoing', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.movements.ongoing');
+})->name('movements.ongoing');
+
+
+// Transaction routes
+Route::get('/transactions', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.transactions.index');
+})->name('transactions.index');
+Route::get('/transactions/about', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.transactions.about');
+})->name('transactions.about');
 
 
 
@@ -62,9 +95,9 @@ Route::prefix('/dashboard')->middleware('auth')->group(function (){
     // Route::resource('lost-assets', LostAssetController::class)->except(['destroy']);
 
     // Account profile
-    Route::get('/profile-account', [UserProfileController::class, 'show'])->name('dashboard.profile.show');
-    Route::get('/profile-setting', [UserProfileController::class, 'edit'])->name('dashboard.profile.edit');
-    Route::put('/profile-setting', [UserProfileController::class, 'update'])->name('dashboard.profile.update');
+    // Route::get('/profile-account', [UserProfileController::class, 'show'])->name('dashboard.profile.show');
+    // Route::get('/profile-setting', [UserProfileController::class, 'edit'])->name('dashboard.profile.edit');
+    // Route::put('/profile-setting', [UserProfileController::class, 'update'])->name('dashboard.profile.update');
 
 });
 
@@ -79,3 +112,9 @@ Route::get('/link-storage', function () {
 });
 
 
+
+
+// Fallback routes
+Route::get('/fallback', function () {
+    return redirect()->back();
+})->name('fallback');
