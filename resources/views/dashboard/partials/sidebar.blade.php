@@ -44,7 +44,17 @@
 
                 {{-- @if(Auth::user()->role == 'admin')
                 @endif --}}
-
+                <li class="" title="ATC: Authority To Collect">
+                    <a href="{{ route('purchase') }}"
+                        class="{{ request()->routeIs('purchase*')? 'text-white bg-['.$brand['bg-color'].']' :''; }}
+                        flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
+                        <div
+                            class="flex-shrink-0 w-8 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                            <i class='fa fa-tint'></i>
+                        </div>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Purchase (ATC)</span>
+                    </a>
+                </li>
 
 
                 <li class="">
@@ -69,20 +79,8 @@
                 </li>
 
                 <li class="">
-                    <a href="{{ route('fallback') }}"
-                        class="{{ request()->routeIs('fallback.*')? 'text-white bg-['.$brand['bg-color'].']' :''; }}
-                        flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
-                        <div
-                            class="flex-shrink-0 w-8 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
-                            <i class='fa fa-pencil-square-o'></i>
-                        </div>
-                        <span class="flex-1 ms-3 whitespace-nowrap">Add Program</span>
-                    </a>
-                </li>
-
-                <li class="">
-                    <a href="{{ route('fallback') }}"
-                        class="{{ request()->routeIs('fallback.*')? 'text-white bg-['.$brand['bg-color'].']' :''; }}
+                    <a href="{{ route('movements.index') }}"
+                        class="{{ request()->routeIs('movements.*')? 'text-white bg-['.$brand['bg-color'].']' :''; }}
                         flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
                         <div
                             class="flex-shrink-0 w-8 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">

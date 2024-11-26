@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 Route::view('/', 'welcome');
 
@@ -22,29 +24,35 @@ Route::get('/dashboard', function (Request $request){
 })->name('dashboard');
 
 
+// Movement routes
+Route::get('/purchase', function (Request $request){
+    return view('dashboard.pages.purchase.index');
+})->name('purchase');
+
+
 
 // Programs routes
 Route::get('/programs', function (Request $request){
     // return "dashboard";
     return view('dashboard.pages.programs.index');
+})->name('programs');
+
+Route::get('/programs', function (Request $request){
+    // return "dashboard";
+    return view('dashboard.pages.programs.index');
 })->name('programs.index');
 
-Route::get('/programs/ongoing', function (Request $request){
+Route::get('/programs/create', function (Request $request){
     // return "dashboard";
-    return view('dashboard.pages.programs.ongoing');
-})->name('programs.ongoing');
+    return view('dashboard.pages.programs.create');
+})->name('programs.create');
 
 
 // Movement routes
 Route::get('/movements', function (Request $request){
-    // return "dashboard";
     return view('dashboard.pages.movements.index');
 })->name('movements.index');
 
-Route::get('/movements/ongoing', function (Request $request){
-    // return "dashboard";
-    return view('dashboard.pages.movements.ongoing');
-})->name('movements.ongoing');
 
 
 // Transaction routes

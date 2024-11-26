@@ -258,15 +258,15 @@
                                 </td>
                                 <td class="px-6 py-4">
 
-                                    <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                                    <button id="dropdownMenuIconButton1" data-dropdown-toggle="dropdownDots1" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
                                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
                                         <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
                                         </svg>
                                         </button>
 
                                         <!-- Dropdown menu -->
-                                        <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+                                        <div id="dropdownDots1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton1">
                                               <li>
                                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">View</a>
                                               </li>
@@ -281,6 +281,62 @@
                                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user
                                                 </a>
                                               </li>
+                                            </ul>
+                                        </div>
+                                </td>
+                            </tr>
+
+                            <tr
+                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-4 p-4">
+                                    <div class="flex items-center">
+                                        <input id="checkbox-table-search-1" type="checkbox"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                    </div>
+                                </td>
+                                <th scope="row"
+                                    class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                                        alt="Jese image">
+                                    <div class="ps-3">
+                                        <div class="text-base font-semibold">Neil Sims</div>
+                                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                                    </div>
+                                </th>
+                                <td class="px-6 py-4">
+                                    React Developer
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Offline
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+
+                                    <button id="dropdownMenuIconButton2" data-dropdown-toggle="dropdownDots2" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+                                        <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+                                        </svg>
+                                        </button>
+
+                                        <!-- Dropdown menu -->
+                                        <div id="dropdownDots2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton2">
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">View</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                            </li>
+                                            <li class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                                <!-- Modal toggle -->
+                                                <a href="#" type="button"
+                                                    data-modal-target="editUserModal"
+                                                    data-modal-show="editUserModal"
+                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user
+                                                </a>
+                                            </li>
                                             </ul>
                                         </div>
                                 </td>
@@ -343,72 +399,6 @@
                             </tr>
 
 
-
-                            <tr
-                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                <td class="w-4 p-4">
-                                    <div class="flex items-center">
-                                        <input id="checkbox-table-search-2" type="checkbox"
-                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
-                                    </div>
-                                </td>
-                                <th scope="row"
-                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-3.jpg"
-                                        alt="Jese image">
-                                    <div class="ps-3">
-                                        <div class="text-base font-semibold">Bonnie Green</div>
-                                        <div class="font-normal text-gray-500">bonnie@flowbite.com</div>
-                                    </div>
-                                </th>
-                                <td class="px-6 py-4">
-                                    Designer
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Online
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <!-- Modal toggle -->
-                                    <a href="#" type="button" data-modal-show="editUserModal"
-                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
-                                </td>
-                            </tr>
-
-
-                            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                <td class="w-4 p-4">
-                                    <div class="flex items-center">
-                                        <input id="checkbox-table-search-3" type="checkbox"
-                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
-                                    </div>
-                                </td>
-                                <th scope="row"
-                                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-4.jpg"
-                                        alt="Jese image">
-                                    <div class="ps-3">
-                                        <div class="text-base font-semibold">Leslie Livingston</div>
-                                        <div class="font-normal text-gray-500">leslie@flowbite.com</div>
-                                    </div>
-                                </th>
-                                <td class="px-6 py-4">
-                                    SEO Specialist
-                                </td>
-                                <td class="px-6 py-4">
-                                    <div class="flex items-center">
-                                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Offline
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <!-- Modal toggle -->
-                                    <a href="#" type="button" data-modal-show="editUserModal"
-                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
 

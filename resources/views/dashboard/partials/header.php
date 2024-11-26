@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Finder | App</title>
+    <title>TMMMS App | Truck Maintenance Monitoring Management Systems Nigeria</title>
+    <link rel="icon" type="image/x-icon" href="/images/tmmms-logo.svg">
+
     <!-- Tailwind cdn -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="/css/cdn.tailwindcss.com.3.4.5.js"></script>
