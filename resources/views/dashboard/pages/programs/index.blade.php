@@ -609,13 +609,19 @@
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
+                                        ATC No.
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
                                         Customer
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Lifted Litters
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Amount Cost
+                                        Amount Cost (NGN)
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        Amount Cost (USD)
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Truck
@@ -643,10 +649,11 @@
                                             <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                         </div>
                                     </td>
+                                    <td class="px-6 py-4">
+                                        ATC-23543600
+                                    </td>
                                     <th scope="row"
                                         class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                                        <img class="w-10 h-10 rounded-full" src="/images/default-profile.png"
-                                            alt="Jese image">
                                         <div class="ps-3">
                                             <div class="text-base font-semibold">Neil Sims Center</div>
                                             <div class="font-normal text-gray-500">+2349091920011</div>
@@ -658,19 +665,22 @@
                                         23,543,600
                                     </td>
                                     <td class="px-6 py-4">
-                                        <a href="#">
-                                            NGN. 900,000
-                                        </a>
+                                        900,000
                                     </td>
                                     <td class="px-6 py-4">
-                                        SinoTruck - PN-3426547
+                                        8,100
                                     </td>
-                                    <td class="px-6 py-4">
-                                        Mal bello Muhammad
+                                    <td class="ps-3">
+                                        <div class="text-base font-semibold">SinoTruck</div>
+                                        <div class="font-normal text-gray-500">KAN1920011</div>
+                                    </td>
+                                    <td class="ps-3">
+                                        <div class="text-base font-semibold">Sani Umar</div>
+                                        <div class="font-normal text-gray-500">+23454655437</div>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center">
-                                            <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Processing
+                                            <div class="h-2.5 w-2.5 rounded-full bg-yellow-500 me-2"></div> Processing
                                         </div>
                                     </td>
                                     <td class="px-6 py-4">
@@ -691,7 +701,7 @@
                                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                                 aria-labelledby="dropdownMenuIconButton1">
                                                 <li>
-                                                    <a href="#"
+                                                    <a href="{{ route('programs.show') }}"
                                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">View</a>
                                                 </li>
                                                 <li
