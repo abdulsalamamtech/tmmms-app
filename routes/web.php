@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+
 
 
 Route::view('/', 'welcome');
@@ -42,10 +44,10 @@ Route::get('/programs', function (Request $request){
     return view('dashboard.pages.programs.index');
 })->name('programs.index');
 
-Route::get('/programs/create', function (Request $request){
+Route::get('/programs/show', function (Request $request){
     // return "dashboard";
-    return view('dashboard.pages.programs.create');
-})->name('programs.create');
+    return view('dashboard.pages.programs.show');
+})->name('programs.show');
 
 
 // Movement routes
