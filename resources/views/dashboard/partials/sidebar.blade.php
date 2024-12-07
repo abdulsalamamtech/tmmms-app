@@ -223,6 +223,43 @@
                 </li>
 
                 <hr>
+                <li>
+                    <details class="group ">
+            
+                        <summary
+                            class="{{ request()->routeIs('fallback.*')? 'text-white bg-['.$brand['bg-color'].']' :''; }} 
+                             p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700
+                             flex items-center justify-between gap-2 p-2 font-medium marker:content-none hover:cursor-pointer">
+            
+                            <span class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+            
+                                <span>
+                                    Recent Documents
+                                </span>
+                            </span>
+                            <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                                </path>
+                            </svg>
+                        </summary>
+            
+                        <article class="px-4 pb-4">
+                            <ul class="flex flex-col gap-1 pl-2">
+                                <li class="mt-1 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-200"><a href="">Document type ACC1</a></li>
+                                <li class="mt-1 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-200"><a href="">Document type ACC2</a></li>
+                                <li class="mt-1 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-200"><a href="">Document type ACC3</a></li>
+                            </ul>
+                        </article>
+            
+                    </details>
+                </li>
 
                 <li class="">
                     <a href="{{ route('fallback') }}"
