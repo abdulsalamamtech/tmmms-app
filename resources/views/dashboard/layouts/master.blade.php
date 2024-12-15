@@ -41,6 +41,7 @@
 
 
 
+{{-- Yield content on the page --}}
 @yield('content')
 
 

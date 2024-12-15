@@ -146,7 +146,7 @@
                 <div class="relative p-8 overflow-x-auto shadow-md sm:rounded-lg">
                     <!-- Header Section -->
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">Transactions</h2>
+                        <h2 class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">Pending Transactions</h2>
                         <a href="{{ route('dashboard.refinery') }}                                                                                                                                                                      " class="px-3 md:px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-700">
                             <i class='fa fa-pie-chart'></i>
                             <span class="pl-2">Back to dashboard</span>
@@ -210,8 +210,8 @@
                         </div>
 
                         {{-- Download and Print --}}
-                        <div>
-                            <div class="text-right mt-3">
+                        <div >
+                            <div class="text-right">
                                 <a href="#">
                                     <button type="button"
                                         class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-green-500 border border-gray-300 focus:outline-none hover:bg-green-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
@@ -323,7 +323,7 @@
                                     {{-- Status --}}
                                     <td class="px-6 py-4">
                                         <div class="flex items-center">
-                                            <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> verified
+                                            <div class="h-2.5 w-2.5 rounded-full bg-yellow-500 me-2"></div> pending
                                         </div>
                                     </td>
                                     {{-- Action --}}
@@ -371,6 +371,7 @@
 
             </div>
             {{-- End of Table --}}
+
 
 
 

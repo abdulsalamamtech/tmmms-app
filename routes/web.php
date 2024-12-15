@@ -57,11 +57,6 @@ Route::get('/movements', function (Request $request){
 
 
 
-// Transaction routes
-Route::get('/transactions', function (Request $request){
-    // return "dashboard";
-    return view('dashboard.pages.transactions.index');
-})->name('transactions.index');
 Route::get('/transactions/about', function (Request $request){
     // return "dashboard";
     return view('dashboard.pages.transactions.about');
@@ -128,3 +123,119 @@ Route::get('/link-storage', function () {
 Route::get('/fallback', function () {
     return redirect()->back();
 })->name('fallback');
+
+
+
+
+
+
+
+
+// Refinery routes
+Route::prefix('/refinery')->middleware('guest')->group(function (){
+
+
+    Route::get('/dashboard', function (Request $request){
+        return view('dashboard.pages.refineries.dashboard');
+    })->name('dashboard.refinery');
+
+    // Fallback routes
+    Route::get('/fallback', function () {
+        return redirect()->back();
+        // return view('dashboard.pages.transactions.about');
+
+    })->name('fallback');
+
+
+    Route::get('/products', function (Request $request){
+        return view('dashboard.pages.products.index');
+    })->name('products.index');
+
+    Route::get('/purchase', function (Request $request){
+        return view('dashboard.pages.purchase.index');
+    })->name('purchase.index');
+    
+    Route::get('/programs', function (Request $request){
+        return view('dashboard.pages.programs.index');
+    })->name('programs.index');
+
+    Route::get('/waybill-and-ticket', function (Request $request){
+        return view('dashboard.pages.waybill-and-ticket.index');
+    })->name('waybill-and-ticket.index');
+
+
+    Route::get('/marketers', function (Request $request){
+        return view('dashboard.pages.marketers.index');
+    })->name('marketers.index');
+    
+
+    Route::get('/transporters', function (Request $request){
+        return view('dashboard.pages.transporters.index');
+    })->name('transporters.index');
+    
+    // Transaction routes
+    Route::get('/transactions', function (Request $request){
+        return view('dashboard.pages.transactions.index');
+    })->name('transactions.index');
+    Route::get('/pending-transactions', function (Request $request){
+        return view('dashboard.pages.transactions.pending');
+    })->name('pending.transactions');
+
+});
+
+
+
+// Marketers routes
+Route::prefix('/marketer')->middleware('guest')->group(function (){
+
+
+    Route::get('/', function () {
+        return view('dashboard.dashboard');
+    });
+
+    Route::get('/dashboard', function (Request $request){
+        return view('dashboard.dashboard');
+    })->name('dashboard');
+
+    // Fallback routes
+    Route::get('/fallback', function () {
+        return redirect()->back();
+        // return view('dashboard.pages.transactions.about');
+
+    })->name('fallback');
+
+
+
+    Route::get('/products', function (Request $request){
+        return view('dashboard.pages.products.marketers');
+    })->name('products.marketers'); 
+
+    Route::get('/purchase', function (Request $request){
+        return view('dashboard.pages.purchase.marketers');
+    })->name('purchase.marketers');
+
+
+    Route::get('/programs', function (Request $request){
+        return view('dashboard.pages.programs.marketers');
+    })->name('programs.marketers');
+
+});
+
+
+
+// Transporters routes
+Route::prefix('/transporter')->middleware('guest')->group(function (){
+
+    Route::get('/dashboard', function (Request $request){
+        return view('dashboard.dashboard');
+    })->name('dashboard');
+
+    // Fallback routes
+    Route::get('/fallback', function () {
+        return redirect()->back();
+        // return view('dashboard.pages.transactions.about');
+
+    })->name('fallback');
+
+
+});

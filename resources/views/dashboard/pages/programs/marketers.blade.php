@@ -6,6 +6,18 @@
 
         <div class="rounded-lg dark:border-gray-700 mt-20">
 
+            {{-- Information --}}
+            <div
+                class="bg-white shadow-lg rounded-lg flex items-center gap-2 p-4 w-full dark:bg-slate-800 dark:text-gray-100">
+                <div class="md:p-2">
+                    <i class="fa fa-truck bg-[#0828b9] p-2 rounded-full md:text-2xl text-white"></i>
+                </div>
+                <div class="sm:p-2 mb-4 md:mb-0">
+                    <h2 class="md:text-xl font-bold mb-2">Amtech Oil & Gas</h2>
+                    <p class="text-gray-700 dark:text-slate-400 mb-1">manager@amtechoilandgas.com</p>
+                    <p class="text-gray-500 dark:text-gray-300">No. 54 Rimi, Gwarzo Road, Kano State</p>
+                </div>
+            </div>
 
             {{-- Statistical widge --}}
             <div class="p-6 my-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
@@ -237,12 +249,29 @@
             {{-- ATC Information --}}
             <div class="p-6 my-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                 <div class="space-y-3 py-4 px-2">
+                    <!-- Country -->
+                    {{-- <div class="flex justify-between items-center">
+                        <span class="font-semibold text-gray-700 dark:text-gray-300">Country</span>
+                        <span class="text-blue-600 dark:text-blue-400">Nigeria 🇳🇬</span>
+                    </div> --}}
+
+                    {{-- IDS user_id, center_id, event_id, booked_id, year --}}
+                    <div class="font-semibold flex justify-between items-start border-b px-2">
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">PFI No:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">121320562024</div>
+                    </div>
 
                     {{-- Name --}}
                     <div class="font-semibold flex justify-between items-start border-b px-2">
                         <div class="w-1/3 text-gray-700 dark:text-gray-300">Deport:</div>
                         <div class="w-7/12 text-gray-500 dark:text-gray-400">Dangote Refinery</div>
                     </div>
+
+                    <div class="font-semibold flex justify-between items-start border-b px-2">
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Product Type:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">AGO</div>
+                    </div>
+
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
                         <div class="w-1/3 text-gray-700 dark:text-gray-300">Litters:</div>
@@ -255,23 +284,18 @@
                     </div>
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
-                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Programs:</div>
-                        <div class="w-7/12 text-gray-500 dark:text-gray-400">19,900,200</div>
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Available Litters:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">150,000</div>
                     </div>
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
-                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Pending:</div>
-                        <div class="w-7/12 text-gray-500 dark:text-gray-400">450</div>
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Program:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">12</div>
                     </div>
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
-                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Processing:</div>
-                        <div class="w-7/12 text-gray-500 dark:text-gray-400">10,450</div>
-                    </div>
-
-                    <div class="font-semibold flex justify-between items-start border-b px-2">
-                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Delivered:</div>
-                        <div class="w-7/12 text-gray-500 dark:text-gray-400">450,000</div>
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Date:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">23/05/2024</div>
                     </div>
 
 
@@ -486,6 +510,8 @@
 
                     </div>
 
+
+
                     {{-- Filter Search and Export --}}
                     <div class="flex justify-between items-end gap-4 space-y-4 md:space-y-0 py-4 bg-white dark:bg-gray-900 px-4">
                         {{-- Filter --}}
@@ -542,32 +568,41 @@
                         </div>
 
                         {{-- Download and Print --}}
-                        <div>
+                        <div class="flex items-center justify-center gap-3">
                             <div class="text-right mt-3">
-                                <a href="#">
-                                    <button type="button"
-                                        class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-green-500 border border-gray-300 focus:outline-none hover:bg-green-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <i class="fa fa-file"></i>
-                                        <span class="pl-2">Export</span>
-                                    </button>
-                                </a>
                                 {{-- <a href="#">
                                     <button type="button"
                                         class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-green-500 border border-gray-300 focus:outline-none hover:bg-green-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
                                         <i class="fa fa-print"></i>
                                         <span class="pl-2">Print</span>
                                     </button>
-                                </a>
+                                </a> --}}
                                 <a href="#" class="">
                                     <button type="button"
                                         class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-green-500 border border-gray-300 focus:outline-none hover:bg-green-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
                                         <i class="fa fa-download"></i>
                                         <span class="pl-2">Download</span>
                                     </button>
-                                </a> --}}
+                                </a>
                             </div>
-                        </div>                        
+
+                            {{-- Send To Refinery --}}
+                            <div class="text-right mt-3">
+                                <a href="#" class="">
+                                    <button type="button"
+                                        class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-blue-500 border border-gray-300 focus:outline-none hover:bg-blue-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                                        <i class="fa fa-send"></i>
+                                        <span class="pl-2">Send Programs</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    
+                    
                     </div>
+
+
+
 
 
 
