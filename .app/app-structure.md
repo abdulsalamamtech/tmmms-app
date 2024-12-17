@@ -26,6 +26,9 @@ Truck Monitoring Maintenance Management System
     - type
     - size
 
+- administrator_departments
+    - user_id
+
 - refinery
     - license_number
     - license_details
@@ -35,6 +38,14 @@ Truck Monitoring Maintenance Management System
     - address
     - state
     - country
+
+        - refinery_departments
+            - user_id
+            - refinery_id
+            - role
+            - responsibilities_description
+            - zone
+            - state
 
 - marketers
     - license_number
@@ -46,6 +57,12 @@ Truck Monitoring Maintenance Management System
     - state
     - country
 
+        - marketer_departments
+            - user_id
+            - marketer_id
+            - role
+            - responsibilities_description
+
 - transporters
     - license_number
     - license_details
@@ -55,6 +72,12 @@ Truck Monitoring Maintenance Management System
     - address
     - state
     - country
+
+        - transporter_departments
+            - user_id
+            - transporter_id
+            - role
+            - responsibilities_description
 
         - drivers
             - first_name
