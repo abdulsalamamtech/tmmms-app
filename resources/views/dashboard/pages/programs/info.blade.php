@@ -6,18 +6,6 @@
 
         <div class="rounded-lg dark:border-gray-700 mt-20">
 
-            {{-- Information --}}
-            <div
-                class="bg-white shadow-lg rounded-lg flex items-center gap-2 p-4 w-full dark:bg-slate-800 dark:text-gray-100">
-                <div class="md:p-2">
-                    <i class="fa fa-truck bg-[#0828b9] p-2 rounded-full md:text-2xl text-white"></i>
-                </div>
-                <div class="sm:p-2 mb-4 md:mb-0">
-                    <h2 class="md:text-xl font-bold mb-2">Amtech Oil & Gas</h2>
-                    <p class="text-gray-700 dark:text-slate-400 mb-1">manager@amtechoilandgas.com</p>
-                    <p class="text-gray-500 dark:text-gray-300">No. 54 Rimi, Gwarzo Road, Kano State</p>
-                </div>
-            </div>
 
             {{-- Statistical widge --}}
             <div class="p-6 my-6 bg-white rounded-lg shadow-lg dark:bg-gray-800">
@@ -272,6 +260,10 @@
                         <div class="w-7/12 text-gray-500 dark:text-gray-400">AGO</div>
                     </div>
 
+                    <div class="font-semibold flex justify-between items-start border-b px-2">
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Program ID:</div>
+                        <div class="w-7/12 text-gray-500 dark:text-gray-400">PRO_6574683</div>
+                    </div>
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
                         <div class="w-1/3 text-gray-700 dark:text-gray-300">Litters:</div>
@@ -289,7 +281,7 @@
                     </div>
 
                     <div class="font-semibold flex justify-between items-start border-b px-2">
-                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Program:</div>
+                        <div class="w-1/3 text-gray-700 dark:text-gray-300">Truck:</div>
                         <div class="w-7/12 text-gray-500 dark:text-gray-400">12</div>
                     </div>
 
@@ -300,6 +292,20 @@
 
 
                 </div>
+
+
+                <div>
+                    {{-- Send To Refinery --}}
+                    <div class="text-right mt-3">
+                        <a href="#" class="">
+                            <button type="button"
+                                class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-blue-500 border border-gray-300 focus:outline-none hover:bg-blue-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                                <i class="fa fa-send"></i>
+                                <span class="pl-2">Send Program</span>
+                            </button>
+                        </a>
+                    </div>                        
+                </div>
             </div>
 
             {{-- Tables --}}
@@ -309,11 +315,11 @@
                 <div class="relative p-8 overflow-x-auto shadow-md sm:rounded-lg">
                     <!-- Header Section -->
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">Programs</h2>
+                        <h2 class="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">Program Trucks</h2>
                         <button class="px-3 md:px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-700"
                             data-modal-target="addUserModal" data-modal-show="addUserModal">
                             <i class='fa fa-pencil-square-o'></i>
-                            <span class="pl-2">Add program</span>
+                            <span class="pl-2">Add Truck</span>
                         </button>
 
 
@@ -328,7 +334,7 @@
                                     <div
                                         class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                            Add program
+                                            Add Truck
                                         </h3>
                                         <button type="button"
                                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -346,6 +352,7 @@
                                     <div class="p-6 space-y-6 dark:text-white">
 
                                         {{-- Basic Information --}}
+                                        {{-- Fill this form with only previous customers details --}}
                                         <div class="w-100 text-center">Basic Information</div>
                                         <div class="grid grid-cols-6 gap-6">
 
@@ -355,7 +362,7 @@
                                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                                     Litter to lift <span class="text-red-500">*</span>
                                                 </label>
-                                                <input type="number" name="first-name" id="first-name"
+                                                <input type="number" name="first-name" id="first-name" min="33000" max="65000"
                                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                     placeholder="July Starter program" required="">
                                             </div>
@@ -393,57 +400,15 @@
                                                 <select type="email" name="email" id="email"
                                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                     placeholder="truck and plate number" required="" value="">
-                                                    <option value="1">SinoTruck 23542365355</option>
-                                                    <option value="2">BenTruck 323654745</option>
+                                                    <option value="1">TRN-22-XX | 50000 LTRS | 17-16.5-16.5</option>
+                                                    <option value="2">DKT-01-XY | 45000 LTRS | 15-15-15</option>
                                                 </select>
                                             </div>
 
                                         </div>
 
-                                        <div class="grid grid-cols-6 gap-6">
-                                            <div class="col-span-12">
-                                                <label for="first-name"
-                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Customer's Address <span class="text-red-500">*</span>
-                                                </label>
-                                                <input type="text" name="first-name" id="first-name"
-                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                    placeholder="Bonnie program center" required="">
-                                            </div>
-                                        </div>
-                                        <div class="grid grid-cols-6 gap-6">
-                                            <div class="col-span-6 sm:col-span-3">
-                                                <label for="email"
-                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                                    State <span class="text-red-500">*</span>
-                                                </label>
-                                                <select type="email" name="email" id="email"
-                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                    placeholder="workshop" required="" value="">
-                                                    <option value="1">FCT</option>
-                                                    <option value="2">Kaduna</option>
-                                                    <option value="2">Zamfara</option>
-                                                    <option value="2">Kano</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-span-6 sm:col-span-3">
-                                                <label for="slots"
-                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                                    LGA/City
-                                                    <span class="text-red-500">*</span>
-                                                </label>
-                                                <select type="email" name="email" id="email"
-                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                    placeholder="truck and plate number" required="" value="">
-                                                    <option value="1">Fagge</option>
-                                                    <option value="2">Gwarzo</option>
-                                                </select>
-                                            </div>
-                                        </div>
 
-
-
-                                        {{-- Booking Information --}}
+                                        {{-- Driver Information --}}
                                         <div class="w-100 text-center">Drivers Information</div>
 
 
@@ -494,6 +459,57 @@
                                                     disabled>
                                             </div>
                                         </div>
+
+
+                                        {{-- <div class="grid grid-cols-6 gap-6">
+                                            <div class="col-span-6 sm:col-span-3">
+                                                <label for="first-name"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Customer's Address <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="text" name="first-name" id="first-name"
+                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="No. 90 Hadeja Road" required="">
+                                            </div>
+                                            <div class="col-span-6 sm:col-span-3">
+                                                <label for="first-name"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Customer's Phone Number <span class="text-red-500">*</span>
+                                                </label>
+                                                <input type="tel" name="first-name" id="first-name"
+                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="09032149000" required="">
+                                            </div>                                            
+                                        </div> --}}
+                                        <div class="grid grid-cols-6 gap-6">
+                                            <div class="col-span-6 sm:col-span-3">
+                                                <label for="email"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                                    State <span class="text-red-500">*</span>
+                                                </label>
+                                                <select type="email" name="email" id="email"
+                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="workshop" required="" value="">
+                                                    <option value="1">FCT</option>
+                                                    <option value="2">Kaduna</option>
+                                                    <option value="2">Zamfara</option>
+                                                    <option value="2" selected>Kano</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-span-6 sm:col-span-3">
+                                                <label for="slots"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                                    LGA/City
+                                                    <span class="text-red-500">*</span>
+                                                </label>
+                                                <select type="email" name="email" id="email"
+                                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="truck and plate number" required="" value="">
+                                                    <option value="1" selected>Fagge</option>
+                                                    <option value="2">Gwarzo</option>
+                                                </select>
+                                            </div>
+                                        </div>                                        
 
                                     </div>
                                     <!-- Modal footer -->
@@ -592,19 +608,6 @@
 
 
 
-                    <div>
-                        {{-- Send To Refinery --}}
-                        <div class="text-right mt-3">
-                            <a href="#" class="">
-                                <button type="button"
-                                    class="inline-flex items-center px-2.5 py-1.5 text-sm font-medium text-gray-100 bg-blue-500 border border-gray-300 focus:outline-none hover:bg-blue-400 focus:ring-4 focus:ring-gray-100 rounded-lg dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                    <i class="fa fa-send"></i>
-                                    <span class="pl-2">Send Programs</span>
-                                </button>
-                            </a>
-                        </div>                        
-                    </div>
-
 
                     {{-- Table Content --}}
                     <div class="overflow-x-scroll py-2">
@@ -619,7 +622,7 @@
                                         </div>
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        ATC No.
+                                        Program ID
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Customer
@@ -660,7 +663,7 @@
                                         </div>
                                     </td>
                                     <td class="px-6 py-4">
-                                        ATC-23543600
+                                        PRG-23543600
                                     </td>
                                     <th scope="row"
                                         class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">

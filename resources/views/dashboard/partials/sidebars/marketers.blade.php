@@ -18,8 +18,8 @@
         <ul class="space-y-2 font-medium mt-2">
 
             <li class="">
-                <a href="{{ route('dashboard') }}"
-                    class="{{ request()->routeIs('dashboard') ? 'text-white bg-[' . $brand['bg-color'] . ']' : '' }}
+                <a href="{{ route('dashboard.marketers') }}"
+                    class="{{ request()->routeIs('dashboard.marketers') ? 'text-white bg-[' . $brand['bg-color'] . ']' : '' }}
                 flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
                     <div
                         class="flex-shrink-0 w-8 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">

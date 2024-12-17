@@ -223,7 +223,8 @@
                                     <div class="relative w-full max-w-2xl max-h-full bg-white dark:bg-gray-700">
 
                                         <!-- Modal content -->
-                                        <form class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                        <form class="relative bg-white rounded-lg shadow dark:bg-gray-700" 
+                                            action="{{ route('purchase.marketers') }}">
                                             <!-- Modal header -->
                                             <div
                                                 class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
@@ -262,6 +263,9 @@
                                                     </div>
                                                 </div>
 
+                                                {{-- Booking Information --}}
+                                                <div class="w-100 text-center">Total cost of product</div>
+                                                                                                
                                                 {{-- First Driver --}}
                                                 <div class="flex gap-6">
                                                     <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
@@ -271,13 +275,7 @@
                                                         <input type="text" name="last-name" id="last-name"
                                                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                             placeholder="0" required="" value="1,800,000" disabled>
-                                                    </div>
-
-
-
-                                                    {{-- Booking Information --}}
-                                                    <div class="w-100 text-center">Total cost of product</div>
-    
+                                                    </div>    
 
                                                     <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
                                                         <label for="slots"

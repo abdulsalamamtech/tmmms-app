@@ -86,6 +86,11 @@ Truck Monitoring Maintenance Management System
             - driver_id
     
 
+- payment_accounts [for sending payments for transporters][marketers & transporters]
+    - virtual_payment_account
+    - amount
+    - user_id
+
 - exchange_rates
     - refinery_id
     - naira
@@ -131,9 +136,20 @@ Truck Monitoring Maintenance Management System
     - transaction_id
     - pfi_number
     - marketer_id
+    - approved [ true | false]
 
     - atc_number  [ATC] [from refinery]
     - generated_by []
+
+    - meter_ticket_number [at refinery deport]
+    - waybill_number [from marketers representatives]
+
+    - customer_name [for customers buying truck product after refinery approval default is marketers details]
+    - customer_phone_number [for customers buying the truck product]
+    - address
+    - lga
+    - state
+    - country [default as nigeria]
 
 - program_trucks
     - program_id [from program]
@@ -149,3 +165,25 @@ Truck Monitoring Maintenance Management System
     - description
 
 - delivering_status
+
+
+
+
+purchase
+add programs
+    litters/quantity
+    description
+        it will take you to the program page that was just created
+add trucks
+    litters/quantity
+    transporter/company
+    select trucks from drop down list
+
+approved programs page
+    assign customers
+        - customer_name [for customers buying truck product after refinery approval default is marketers details]
+        - customer_phone_number [for customers buying the truck product]
+        - address
+        - lga
+        - state
+        - country [default as nigeria]

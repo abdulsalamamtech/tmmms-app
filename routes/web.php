@@ -164,22 +164,6 @@ Route::prefix('/refinery')->middleware('guest')->group(function (){
     })->name('waybill-and-ticket.index');
 
 
-    Route::get('/marketers', function (Request $request){
-        return view('dashboard.pages.marketers.index');
-    })->name('marketers.index');
-    
-
-    Route::get('/transporters', function (Request $request){
-        return view('dashboard.pages.transporters.index');
-    })->name('transporters.index');
-    
-    // Transaction routes
-    Route::get('/transactions', function (Request $request){
-        return view('dashboard.pages.transactions.index');
-    })->name('transactions.index');
-    Route::get('/pending-transactions', function (Request $request){
-        return view('dashboard.pages.transactions.pending');
-    })->name('pending.transactions');
 
 });
 
@@ -195,7 +179,7 @@ Route::prefix('/marketer')->middleware('guest')->group(function (){
 
     Route::get('/dashboard', function (Request $request){
         return view('dashboard.dashboard');
-    })->name('dashboard');
+    })->name('dashboard.marketers');
 
     // Fallback routes
     Route::get('/fallback', function () {
@@ -219,6 +203,46 @@ Route::prefix('/marketer')->middleware('guest')->group(function (){
         return view('dashboard.pages.programs.marketers');
     })->name('programs.marketers');
 
+    Route::get('/programs/info', function (Request $request){
+        return view('dashboard.pages.programs.info');
+    })->name('programs.info');
+
+    Route::get('/programs/show', function (Request $request){
+        return view('dashboard.pages.programs.show');
+    })->name('programs.show');
+
+
+    Route::get('/trucks/index', function (Request $request){
+        return view('dashboard.pages.trucks.index');
+    })->name('trucks.index');
+
+    Route::get('/trucks', function (Request $request){
+        return view('dashboard.pages.trucks.marketers');
+    })->name('trucks.marketer');
+
+    Route::get('/trucks/show', function (Request $request){
+        return view('dashboard.pages.trucks.show');
+    })->name('trucks.show');
+
+
+    Route::get('/marketers', function (Request $request){
+        return view('dashboard.pages.marketers.index');
+    })->name('marketers.index');
+    
+
+    Route::get('/transporters', function (Request $request){
+        return view('dashboard.pages.transporters.index');
+    })->name('transporters.index');
+    
+    // Transaction routes
+    Route::get('/transactions', function (Request $request){
+        return view('dashboard.pages.transactions.index');
+    })->name('transactions.index');
+    Route::get('/pending-transactions', function (Request $request){
+        return view('dashboard.pages.transactions.pending');
+    })->name('pending.transactions');
+
+
 });
 
 
@@ -239,3 +263,6 @@ Route::prefix('/transporter')->middleware('guest')->group(function (){
 
 
 });
+
+
+
