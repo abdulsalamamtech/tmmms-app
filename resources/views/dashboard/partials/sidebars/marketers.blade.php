@@ -3,17 +3,6 @@
     aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
 
-        {{-- Load lost assets --}}
-        {{-- @php
-        if(request()->user()->role == 'admin'){
-            $lostAssets = App\Models\LostAsset::all();
-        }else{
-            $lostAssets = request()->user()->lostAssets;
-        }
-        $lostAssets->load(['user', 'images']);
-        $lost_assets = $lostAssets;
-    @endphp --}}
-
         {{-- Start of Sidebar Menu --}}
         <ul class="space-y-2 font-medium mt-2">
 
@@ -76,6 +65,20 @@
             </li>
 
             <li class="">
+                <a href="{{ route('customer-assign-program') }}"
+                    class="{{ request()->routeIs('customer-assign-program.*') ? 'text-white bg-[' . $brand['bg-color'] . ']' : '' }}
+                flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
+                    <div
+                        class="flex-shrink-0 w-8 h-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white">
+                        {{-- <i class="fa fa-wpforms"></i> --}}
+                        <i class="fa fa-truck"></i>
+
+                    </div>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Approved Programs</span>
+                </a>
+            </li>
+
+            <li class="">
                 <a href="{{ route('movements.index') }}"
                     class="{{ request()->routeIs('movements.*') ? 'text-white bg-[' . $brand['bg-color'] . ']' : '' }}
                 flex items-center p-2 text-gray-900 hover:text-gray-100 rounded-lg dark:text-white hover:bg-blue-700 dark:hover:bg-gray-700 group">
@@ -91,6 +94,8 @@
                     </span>
                 </a>
             </li>
+
+
 
             <li class="">
                 <a href="{{ route('fallback') }}"

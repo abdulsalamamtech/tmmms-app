@@ -203,6 +203,12 @@ Route::prefix('/marketer')->middleware('guest')->group(function (){
         return view('dashboard.pages.programs.marketers');
     })->name('programs.marketers');
 
+    Route::get('/programs/index', function (Request $request){
+        return view('dashboard.pages.programs.programs');
+    })->name('programs.marketers.index');
+    
+    
+
     Route::get('/programs/info', function (Request $request){
         return view('dashboard.pages.programs.info');
     })->name('programs.info');
@@ -210,6 +216,11 @@ Route::prefix('/marketer')->middleware('guest')->group(function (){
     Route::get('/programs/show', function (Request $request){
         return view('dashboard.pages.programs.show');
     })->name('programs.show');
+
+    // Assign customers to program
+    Route::get('/customer-assign-program', function (Request $request){
+        return view('dashboard.pages.customers.assign-program');
+    })->name('customer-assign-program');
 
 
     Route::get('/trucks/index', function (Request $request){

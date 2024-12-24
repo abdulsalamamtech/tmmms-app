@@ -370,7 +370,10 @@
                                             <div class="col-span-6 sm:col-span-3">
                                                 <label for="amount-cost"
                                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Amount Cost</label>
+                                                    Amount Cost 
+                                                    {{-- Rate is coming from database --}}
+                                                    <span>(₦ 900.50 / LTR)</span>
+                                                </label>
                                                 <input type="number" name="last-name" id="last-name"
                                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                     placeholder="150000" value="343576" required="" disabled>
@@ -750,7 +753,7 @@
                                                 </h3>
                                                 <button type="button"
                                                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                                    data-modal-hide="addUserModal">
+                                                    data-modal-hide="editUserModal1">
                                                     <svg class="w-3 h-3" aria-hidden="true"
                                                         xmlns="http://www.w3.org/2000/svg" fill="none"
                                                         viewBox="0 0 14 14">
@@ -762,7 +765,7 @@
                                                 </button>
                                             </div>
                                             <!-- Modal body -->
-                                            <div class="p-6 space-y-6 dark:text-white">
+                                            <div class="p-6 space-y-6 dark:text-white bg-white dark:bg-gray-700">
 
                                                 {{-- Basic Information --}}
                                                 <div class="w-100 text-center">Basic Information</div>
@@ -782,7 +785,10 @@
                                                     <div class="col-span-6 sm:col-span-3">
                                                         <label for="amount-cost"
                                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                                            Amount Cost</label>
+                                                            Amount Cost
+                                                            {{-- Rate is coming from database --}}
+                                                            <span>(₦ 900.50 / LTR)</span>
+                                                        </label>
                                                         <input type="number" name="last-name" id="last-name"
                                                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                             placeholder="150000" value="343576" required="" disabled>
@@ -869,8 +875,8 @@
 
 
                                                 {{-- First Driver --}}
-                                                <div class="flex gap-6">
-                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
+                                                <div class="flex gap-6 bg-white dark:bg-gray-700">
+                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12 bg-white dark:bg-gray-700">
                                                         <label for="amount-cost"
                                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                                             Driver's Name (1st)</label>
@@ -880,7 +886,7 @@
                                                             value="Mal. Adamu Idris" disabled>
                                                     </div>
 
-                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
+                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12 bg-white dark:bg-gray-700">
                                                         <label for="slots"
                                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                                             Driver's Number (1st)
@@ -893,8 +899,8 @@
                                                 </div>
 
                                                 {{-- Second driver --}}
-                                                <div class="flex gap-6">
-                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
+                                                <div class="flex gap-6 bg-white dark:bg-gray-700">
+                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12 bg-white dark:bg-gray-700">
                                                         <label for="amount-cost"
                                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                                             Driver's Name (2nd)</label>
@@ -904,7 +910,7 @@
                                                             value="Muhammad Bello" disabled>
                                                     </div>
 
-                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12">
+                                                    <div class="col-span-6 sm:col-span-3 w-100 md:w-6/12 bg-white dark:bg-gray-700">
                                                         <label for="slots"
                                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                                             Driver's Number (2nd)
@@ -919,7 +925,7 @@
                                             </div>
                                             <!-- Modal footer -->
                                             <div
-                                                class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
+                                                class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600 bg-white dark:bg-gray-700">
                                                 <button type="submit"
                                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                                     Save
