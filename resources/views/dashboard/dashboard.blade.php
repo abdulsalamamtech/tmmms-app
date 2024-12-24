@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.master')
 
 @section('content')
+
     <!-- Container -->
     <div class="p-4 sm:ml-64">
 
