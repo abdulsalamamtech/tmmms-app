@@ -1,5 +1,7 @@
 
 
+Users of the application
+--------------------------
 
 Tmmms - add products [administrators]
 Refinery - update price

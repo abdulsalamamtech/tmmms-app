@@ -6,10 +6,6 @@
 -->
 
 
-
-
-
-
 <!-- Header -->
 @include('dashboard.partials.header')
 
